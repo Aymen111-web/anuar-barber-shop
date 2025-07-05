@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuar Barber Shop .</title>
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-50 p-4 shadow-md rounded-b-lg flex items-center justify-between">
+        <div class="text-2xl font-bold text-gray-800 dark:text-gray-200">
+            <a href="#home" class="nav-link"> አኑዋር ፀጉር ቤት</a>
+        </div>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="hidden md:flex space-x-6">
+            <li><a href="#home" class="nav-link hover:text-primary-light red:hover:text-primary-dark transition-colors duration-300">መነሻ</a></li>
+            <li><a href="#about" class="nav-link hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">ስለ አኛ</a></li>
+            <li><a href="#price-list" class="nav-link hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">የዋጋ ዝርዝር</a></li>
+            <li><a href="#testimonials" class="nav-link hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">ምስክሮቻችን</a></li>
+            <li><a href="#contact" class="nav-link hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">አድራሻ</a></li>
+        </ul>
+
+        <!-- Hamburger Menu for Mobile -->
+        <button id="hamburger-menu" class="md:hidden p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark transition-all duration-300">
+            <span class="block w-6 h-1 bg-gray-800 dark:bg-gray-200 rounded-full mb-1"></span>
+            <span class="block w-6 h-1 bg-gray-800 dark:bg-gray-200 rounded-full mb-1"></span>
+            <span class="block w-6 h-1 bg-gray-800 dark:bg-gray-200 rounded-full"></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Navigation Menu (Hidden by default) -->
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white dark:bg-gray-900 shadow-lg z-40 transform translate-x-full md:hidden transition-transform duration-300 p-6 pt-20">
+        <ul class="flex flex-col space-y-4">
+            <li><a href="#home" class="nav-link text-xl text-gray-800 dark:text-gray-200 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">መነሻ</a></li>
+            <li><a href="#about" class="nav-link text-xl text-gray-800 dark:text-gray-200 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">ስለ አኛ</a></li>
+            <li><a href="#price-list" class="nav-link text-xl text-gray-800 dark:text-gray-200 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">የዋጋ ዝርዝር</a></li>
+            <li><a href="#testimonials" class="nav-link text-xl text-gray-800 dark:text-gray-200 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">ምስክሮቻችን</a></li>
+            <li><a href="#contact" class="nav-link text-xl text-gray-800 dark:text-gray-200 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300">አድራሻ</a></li>
+        </ul>
+    </div>
+
+    <main class="pt-16"> <!-- Padding top to account for fixed nav bar -->
+        <!-- Home Page -->
+        <section id="home" class="h-screen flex flex-col justify-center items-center text-white text-center p-4">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 animate-fade-in-up">እንኳን ወደ አኑዋር ፀጉር ቤት በደህና መጡ፡፡</h1>
+            <p class="text-xl md:text-2xl font-light mb-8 animate-fade-in-up delay-100">በአገልግሎታችን ይረካሉ፡፡</p>
+            <button class="btn-primary px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up delay-200" onclick="showMessage('Booking functionality is not yet implemented. Please call us to book!')">ቀጠሮ</button>
+        </section>
+
+        <!-- About Page -->
+        <section id="about" class="page-section py-16 px-4 max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8 text-gray-800 dark:text-gray-200">ስለ አኑዋር ፀጉር ቤት </h2>
+            <div class="card p-8 rounded-2xl">
+                <p class="text-lg leading-relaxed mb-6">
+                አኑዋር ባርበር ሾፕ በዘመናዊ የወንዶች ፀጉር መቁረጥ ላይ ያለና በዘመናዊ ፀጉር ስራ ላይ ተመስርቶ ተቋቋመ። ከ 5 ዓመታት በላይ የስራ ልምድ ያለው አኑዋር ፀጉር መቁረጥን ወደ ስነ-ጥበብ ቀየረው፡፡
+                </p>
+                <p class="text-lg leading-relaxed mb-6">
+                    እኛ የምንሰጠው አገልግሎት ፀጉር መቁረጥ ብቻ ሳይሆን በትክክል እና በዝርዝር የተመሰረተ እና የደንበኞቻችንን ፍላጎት በጥልቀት የሚረዳ አስራር ነው። እኛጋ ሲመጡ ጥራት ያለዉ አገልግሎት ያገኛሉ።  እያንዳንዱም ደንበኛ በትክክልና በእንክብካቤ ይሰራል፤ ጥራታችን መለያችን ነው።
+                </p>
+                <p class="text-lg leading-relaxed">
+                    ወደ እኛ ይመጡ፤ እውነተኛ አና ዝናን ባተረፉ ባለሙያወቻችን ረክተዉ ይሄዳሉ ፡፡
+                </p>
+            </div>
+        </section>
+
+        <!-- Price List Page -->
+        <section id="price-list" class="page-section py-16 px-4 max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-8 text-center text-gray-800 dark:text-gray-200">አገልግሎታቸን አና የዋጋ ዝርዝሮች</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Haircut Card -->
+                <div class="card p-6 rounded-2xl flex flex-col items-center text-center">
+                    <i class="fas fa-cut text-4xl mb-4 text-primary-light dark:text-primary-dark"></i>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-200">ሙሉ ፀጉር</h3>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">በፈለጉት ስታይል መርጠው ይቆረጣሉ፡፡</p>
+                    <p class="text-3xl font-bold text-secondary-light dark:text-secondary-dark">150 birr</p>
+                </div>
+
+                <!-- Beard Trim Card -->
+                <div class="card p-6 rounded-2xl flex flex-col items-center text-center">
+                    <i class="fas fa-beard text-4xl mb-4 text-primary-light dark:text-primary-dark"></i>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-200">ቅርፅ</h3>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">በፈለጉት አይነት ቅርፅ ይሰራሉ፡፡</p>
+                    <p class="text-3xl font-bold text-secondary-light dark:text-secondary-dark">100 birr</p>
+                </div>
+
+                <!-- Hot Towel Shave Card -->
+                <div class="card p-6 rounded-2xl flex flex-col items-center text-center">
+                    <i class="fas fa-hot-tub text-4xl mb-4 text-primary-light dark:text-primary-dark"></i>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-200">ስክራፕ</h3>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">ጥሩ የፊት ገፅታ አንዲኖርዎ አንረዳዎታልን፡፡</p>
+                    <p class="text-3xl font-bold text-secondary-light dark:text-secondary-dark">50 birr</p>
+                </div>
+
+                <!-- Kids Haircut Card -->
+                <div class="card p-6 rounded-2xl flex flex-col items-center text-center">
+                    <i class="fas fa-child text-4xl mb-4 text-primary-light dark:text-primary-dark"></i>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-200">ፂም</h3>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">ፂምዎን ክፊትዎ ቅርፅ ጋር በሚመሳሰል መልኩ አናስተካከልዎታለን፡፡</p>
+                    <p class="text-3xl font-bold text-secondary-light dark:text-secondary-dark">100 birr</p>
+                </div>
+
+                <!-- Full Package Card -->
+                <div class="card p-6 rounded-2xl flex flex-col items-center text-center col-span-1 md:col-span-2">
+                    <i class="fas fa-star text-4xl mb-4 text-primary-light dark:text-primary-dark"></i>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-200">ስቲም</h3>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">ፊትዎን ዘመኑ ባመጣዉ ማሽን በመጠቀም ስቲም ይገባሉ፡፡</p>
+                    <p class="text-3xl font-bold text-secondary-light dark:text-secondary-dark">150 birr</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Page -->
+        <section id="testimonials" class="page-section py-16 px-4 max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-8 text-center text-gray-800 dark:text-gray-200">ደንበኞቻችን ስለ አኛ ምን አሉ?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="card p-6 rounded-2xl text-center">
+                    <div class="text-yellow-500 mb-2">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 italic mb-4">"Anuar always delivers! Best haircut I've ever had. Highly recommend his services."</p>
+                    <p class="font-semibold text-gray-800 dark:text-gray-200">- John D.</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="card p-6 rounded-2xl text-center">
+                    <div class="text-yellow-500 mb-2">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 italic mb-4">"Great attention to detail and a very comfortable atmosphere. I'll definitely be back!"</p>
+                    <p class="font-semibold text-gray-800 dark:text-gray-200">- Michael S.</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="card p-6 rounded-2xl text-center">
+                    <div class="text-yellow-500 mb-2">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 italic mb-4">"Professional and friendly. Anuar truly cares about his clients. My beard has never looked better."</p>
+                    <p class="font-semibold text-gray-800 dark:text-gray-200">- David L.</p>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="card p-6 rounded-2xl text-center">
+                    <div class="text-yellow-500 mb-2">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 italic mb-4">"Always a fantastic experience. Anuar is a true artist with the clippers."</p>
+                    <p class="font-semibold text-gray-800 dark:text-gray-200">- Robert K.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Page -->
+        <section id="contact" class="page-section py-16 px-4 max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-8 text-center text-gray-800 dark:text-gray-200">Contact Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Contact Form -->
+                <div class="card p-8 rounded-2xl">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-200">Send us a Message</h3>
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
+                            <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark outline-none bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-gray-200 transition-all duration-200" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark outline-none bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-gray-200 transition-all duration-200" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark outline-none bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-gray-200 transition-all duration-200" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full py-3 text-lg font-semibold rounded-xl shadow-md hover:shadow-lg transition-all duration-300">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Location & Hours -->
+                <div class="card p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Find Us</h3>
+                        <div class="mb-6 rounded-lg overflow-hidden shadow-md">
+                            <!-- Google Maps Embed Placeholder -->
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.672016301323!2d38.76361221478546!3d9.00547079354005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85c1c2a0d0d1%3A0x123456789abcdef0!2sAddis+Ababa%2C+Ethiopia!5e0!3m2!1sen!2set!4v1678901234567!5m2!1sen!2set"
+                                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-2"><i class="fas fa-map-marker-alt mr-2 text-primary-light dark:text-primary-dark"></i> Bole Road, Addis Ababa, Ethiopia</p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-2"><i class="fas fa-phone mr-2 text-primary-light dark:text-primary-dark"></i> +251 912 345 678</p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-2"><i class="fab fa-telegram-plane mr-2 text-primary-light dark:text-primary-dark"></i> <a href="https://t.me/anuarbarbershop" target="_blank" class="hover:underline">@AnuarBarberShop</a></p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Working Hours</h3>
+                        <ul class="text-gray-700 dark:text-gray-300">
+                            <li>Monday - Friday: 9:00 AM - 7:00 PM</li>
+                            <li>Saturday: 10:00 AM - 6:00 PM</li>
+                            <li>Sunday: Closed</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="py-8 px-4 text-center shadow-inner rounded-t-lg mt-16 bg-gray-100 dark:bg-gray-800 transition-colors duration-500">
+        <p class="text-gray-600 dark:text-gray-400 mb-4">&copy; 2025 Anuar Barber Shop. All rights reserved .</p>
+        <div class="flex justify-center space-x-6">
+            <a href="https://instagram.com" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300 text-2xl">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300 text-2xl">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/251912345678" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300 text-2xl">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://t.me/anuarbarbershop" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300 text-2xl">
+                <i class="fab fa-telegram-plane"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Night Mode / Light Mode Toggle Button -->
+    <button id="theme-toggle" class="p-4 rounded-full shadow-lg">
+        <i class="fas fa-moon text-xl" id="theme-icon"></i>
+    </button>
+
+    <!-- Message Box for alerts -->
+    <div id="message-box" class="message-box">
+        <p id="message-text" class="text-lg font-medium"></p>
+        <button id="message-ok-btn" class="btn-primary">OK</button>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

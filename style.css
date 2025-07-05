@@ -1,0 +1,236 @@
+/* Custom CSS for themes and animations */
+:root {
+    --bg-color-light: #f8f8f8;
+    --text-color-light: #333;
+    --primary-color-light: #4a90e2; /* Blue */
+    --secondary-color-light: #f5a623; /* Orange */
+    --card-bg-color-light: #ffffff;
+    --border-color-light: #e0e0e0;
+    --nav-bg-light: rgba(255, 255, 255, 0.95);
+    --shadow-color-light: rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+    --bg-color-dark: #1a1a2e; /* Dark Blue */
+    --text-color-dark: #e0e0e0;
+    --primary-color-dark: #6a0572; /* Dark Purple */
+    --secondary-color-dark: #fb3640; /* Red */
+    --card-bg-color-dark: #2c2c44;
+    --border-color-dark: #444;
+    --nav-bg-dark: rgba(26, 26, 46, 0.95);
+    --shadow-color-dark: rgba(0, 0, 0, 0.5);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.dark-mode body {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+/* Hero Section Background Image */
+#home {
+    background-image: url('https://placehold.co/1920x1080/000000/FFFFFF?text=Barber+Shop+Hero'); /* Placeholder image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1; /* Ensure content is above overlay */
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: -1; /* Place overlay behind content */
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: var(--nav-bg-light);
+    box-shadow: 0 4px 6px -1px var(--shadow-color-light);
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px);
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.dark-mode nav {
+    background-color: var(--nav-bg-dark);
+    box-shadow: 0 4px 6px -1px var(--shadow-color-dark);
+}
+
+nav a {
+    color: var(--text-color-light);
+    transition: color 0.3s ease;
+}
+
+.dark-mode nav a {
+    color: var(--text-color-dark);
+}
+
+nav a:hover {
+    color: var(--primary-color-light);
+}
+
+.dark-mode nav a:hover {
+    color: var(--primary-color-dark);
+}
+
+/* Card and Section Styling */
+.card {
+    background-color: var(--card-bg-color-light);
+    border: 1px solid var(--border-color-light);
+    box-shadow: 0 4px 8px var(--shadow-color-light);
+    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.dark-mode .card {
+    background-color: var(--card-bg-color-dark);
+    border: 1px solid var(--border-color-dark);
+    box-shadow: 0 4px 8px var(--shadow-color-dark);
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: var(--primary-color-light);
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color-light);
+    transform: translateY(-2px);
+}
+
+.dark-mode .btn-primary {
+    background-color: var(--primary-color-dark);
+}
+
+.dark-mode .btn-primary:hover {
+    background-color: var(--secondary-color-dark);
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: var(--primary-color-light);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dark-mode #theme-toggle {
+    background-color: var(--primary-color-dark);
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Hamburger Menu Animation */
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color-light);
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.dark-mode .hamburger-menu span {
+    background-color: var(--text-color-dark);
+}
+
+.hamburger-menu.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-menu.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%); /* Hidden by default */
+}
+
+.mobile-menu.open {
+    transform: translateX(0); /* Visible */
+}
+
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color-light);
+    border-radius: 10px;
+}
+
+.dark-mode::-webkit-scrollbar-track {
+    background: var(--bg-color-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color-light);
+    border-radius: 10px;
+}
+
+.dark-mode::-webkit-scrollbar-thumb {
+    background: var(--primary-color-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color-light);
+}
+
+.dark-mode::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color-dark);
+}
+
+/* Message Box Styling */
+.message-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--card-bg-color-light);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px var(--shadow-color-light);
+    z-index: 2000;
+    display: none; /* Hidden by default */
+    text-align: center;
+    max-width: 90%;
+}
+
+.dark-mode .message-box {
+    background-color: var(--card-bg-color-dark);
+    box-shadow: 0 8px 16px var(--shadow-color-dark);
+}
+
+.message-box button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+}
