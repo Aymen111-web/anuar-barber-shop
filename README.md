@@ -36,8 +36,7 @@ Anuar Barber Shop is a simple and user-friendly system created to manage barber 
 
 ## 🛠 Tools & Technologies Used
 
-* Programming Language: Java / PHP / JavaScript *(depending on implementation)*
-* Database: MySQL / SQLite
+
 * Frontend: HTML, CSS, JavaScript
 * Backend: Java (Desktop / Android) or PHP (Web)
 * IDE: Android Studio / VS Code / NetBeans
