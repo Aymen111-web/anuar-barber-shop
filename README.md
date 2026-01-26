@@ -84,8 +84,7 @@ AnuarBarberShop/
 
 ## 👨‍💼 Developed By
 
-**Anuar Barber Shop Project Team**
-Software Engineering Students
+Aymen 
 
 ---
 
