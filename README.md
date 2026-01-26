@@ -46,8 +46,6 @@ Anuar Barber Shop is a simple and user-friendly system created to manage barber 
 ## 🖥 System Requirements
 
 * Operating System: Windows / Linux / macOS
-* Minimum RAM: 2 GB
-* Database Server: MySQL (if applicable)
 * Web Browser (for web version)
 
 ---
