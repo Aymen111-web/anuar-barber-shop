@@ -15,9 +15,9 @@ Anuar Barber Shop is a simple and user-friendly system created to manage barber 
 
 * Provide clear information about barber shop services
 * Manage customer appointments efficiently
-* Reduce waiting time and overcrowding
-* Improve service organization and customer satisfaction
-* Digitize basic barber shop operations
+* Reduce waiting time and overcrowding.
+* Improve service organization and customer satisfaction.
+* Digitize basic barber shop operations.
 
 ---
 
